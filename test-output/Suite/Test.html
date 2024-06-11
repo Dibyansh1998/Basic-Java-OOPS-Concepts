@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Default test</title>
+<title>TestNG:  Test</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Default test</h2><table border='1' align="center">
+<h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 18 17:42:10 IST 2024</td>
+<td>Started on:</td><td>Sat May 18 17:38:05 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (38 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (188 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,7 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='BasicJava.LoginPage.driverInvoke()'><b>driverInvoke</b><br>Test class: BasicJava.LoginPage</td>
-<td><div><pre>java.lang.NoClassDefFoundError: org/apache/hc/core5/http/ClassicHttpRequest
+<td><div><pre>java.lang.NoSuchMethodError: &apos;void org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.setDefaultConnectionConfig(org.apache.hc.client5.http.config.ConnectionConfig)&apos;
+	at io.github.bonigarcia.wdm.online.HttpClient.&lt;init&gt;(HttpClient.java:116)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:413)
+	at BasicJava.LoginPage.driverInvoke(LoginPage.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1107217291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1107217291'><pre>java.lang.NoSuchMethodError: &apos;void org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.setDefaultConnectionConfig(org.apache.hc.client5.http.config.ConnectionConfig)&apos;
+	at io.github.bonigarcia.wdm.online.HttpClient.&lt;init&gt;(HttpClient.java:116)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:413)
 	at BasicJava.LoginPage.driverInvoke(LoginPage.java:19)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -102,46 +110,22 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.ClassNotFoundException: org.apache.hc.core5.http.ClassicHttpRequest
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace391877669", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace391877669'><pre>java.lang.NoClassDefFoundError: org/apache/hc/core5/http/ClassicHttpRequest
-	at BasicJava.LoginPage.driverInvoke(LoginPage.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.ClassNotFoundException: org.apache.hc.core5.http.ClassicHttpRequest
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>BasicJava.LoginPage@2f4948e4</td></tr>
+<td>BasicJava.LoginPage@1fa121e2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Inheritence.ChildClass.runtest()'><b>runtest</b><br>Test class: Inheritence.ChildClass</td>
+<td></td>
+<td>0</td>
+<td>Inheritence.ChildClass@3c41ed1d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -152,7 +136,15 @@ Caused by: java.lang.ClassNotFoundException: org.apache.hc.core5.http.ClassicHtt
 </tr>
 <tr>
 <td title='BasicJava.LoginPage.loginCOLA()'><b>loginCOLA</b><br>Test class: BasicJava.LoginPage</td>
-<td><div><pre>java.lang.NoClassDefFoundError: org/apache/hc/core5/http/ClassicHttpRequest
+<td><div><pre>java.lang.NoSuchMethodError: &apos;void org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.setDefaultConnectionConfig(org.apache.hc.client5.http.config.ConnectionConfig)&apos;
+	at io.github.bonigarcia.wdm.online.HttpClient.&lt;init&gt;(HttpClient.java:116)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:413)
+	at BasicJava.LoginPage.driverInvoke(LoginPage.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace169833205", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace169833205'><pre>java.lang.NoSuchMethodError: &apos;void org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.setDefaultConnectionConfig(org.apache.hc.client5.http.config.ConnectionConfig)&apos;
+	at io.github.bonigarcia.wdm.online.HttpClient.&lt;init&gt;(HttpClient.java:116)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:413)
 	at BasicJava.LoginPage.driverInvoke(LoginPage.java:19)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -178,46 +170,9 @@ Caused by: java.lang.ClassNotFoundException: org.apache.hc.core5.http.ClassicHtt
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.ClassNotFoundException: org.apache.hc.core5.http.ClassicHttpRequest
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace243194708", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace243194708'><pre>java.lang.NoClassDefFoundError: org/apache/hc/core5/http/ClassicHttpRequest
-	at BasicJava.LoginPage.driverInvoke(LoginPage.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.ClassNotFoundException: org.apache.hc.core5.http.ClassicHttpRequest
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>BasicJava.LoginPage@2f4948e4</td></tr>
+<td>BasicJava.LoginPage@1fa121e2</td></tr>
 </table><p>
 </body>
 </html>
